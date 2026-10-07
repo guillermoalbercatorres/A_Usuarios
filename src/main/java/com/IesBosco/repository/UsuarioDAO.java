@@ -7,7 +7,9 @@ import java.sql.SQLException;
 
 public interface UsuarioDAO {
 
-    public void añadirUser(Usuario usuario,Connection conexion) throws SQLException;
-    public void eliminarUser(Usuario usuario,Connection conexion) throws SQLException;
-    public void verConsulta(String sqlSentence, Connection conexion) throws SQLException;
+    void anadirUser(Usuario usuario, Connection conexion) throws SQLException;
+
+    void eliminarUser(Usuario usuario, Connection conexion) throws SQLException;
+
+    void verConsulta(String sqlSentence, Connection conexion) throws SQLException;
 }
