@@ -1,11 +1,28 @@
 package com.IesBosco.modelo;
 
+import java.util.List;
+
 public class Usuario {
     private int cod;
     private String nombre;
     private String apellidos;
     private String direccion;
     private String localidad;
+    private List<Telefono> telefonoList;
+
+    public Usuario(){
+
+    }
+
+    public Usuario(int cod, String nombre, String direccion, String apellidos, String localidad, List<Telefono> telefonoList) {
+        this.cod = cod;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.apellidos = apellidos;
+        this.localidad = localidad;
+        this.telefonoList = telefonoList;
+    }
+
 
     public Usuario(int cod, String nombre, String apellidos, String localidad, String direccion) {
         this.cod = cod;
@@ -17,6 +34,14 @@ public class Usuario {
 
     public int getCod() {
         return cod;
+    }
+
+    public List<Telefono> getTelefonoList() {
+        return telefonoList;
+    }
+
+    public void setTelefonoList(List<Telefono> telefonoList) {
+        this.telefonoList = telefonoList;
     }
 
     public void setCod(int cod) {
